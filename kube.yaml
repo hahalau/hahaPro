@@ -19,7 +19,7 @@ metadata:
   name: maven-deployment
 spec:
   selector:
-    matchLables:
+    matchLabels:
       app: maven
   replicas: 1
   template:
