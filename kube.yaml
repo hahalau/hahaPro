@@ -35,5 +35,3 @@ spec:
           env:
             - name: key
               value: "value"
-      nodeSelector:
-        kubernetes.io/os: linux
