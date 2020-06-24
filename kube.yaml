@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: maven
-          image: 192.168.1.156:5000/maven:latest
+          image: 192.168.1.156:5000/maven:latest 
           command: [ "/bin/bash", "-ce", "tail -f /dev/null" ]
           ports:
           - containerPort: 8080
