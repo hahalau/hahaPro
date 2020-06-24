@@ -18,20 +18,22 @@ kind: Deployment
 metadata:
   name: maven-deployment
 spec:
+  selector:
+    matchLabels:
+      app: maven
   replicas: 1
   template:
     metadata:
       labels:
         app: maven
     spec:
-      imagePullSecrets:
-        - name: harborsecret
       containers:
         - name: maven
           image: 192.168.1.156:5000/maven:latest
-          imagePullPolicy: Always
           ports:
           - containerPort: 8080
           env:
             - name: key
               value: "value"
+      nodeSelector:
+        kubernetes.io/os: linux
