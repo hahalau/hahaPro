@@ -4,5 +4,5 @@ VOLUME /tmp
 COPY target/spring-boot-demo-0.0.1-SNAPSHOT.jar demo.jar
 RUN bash -c "touch /demo.jar"
 EXPOSE 8080
-#指定容器启动时要执行的命令
+#指定容器启动时要执行的命令1111
 ENTRYPOINT ["java","-jar","demo.jar"]
